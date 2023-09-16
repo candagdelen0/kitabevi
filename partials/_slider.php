@@ -8,13 +8,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://picsum.photos/190/50" class="d-block w-100 ps-2 pe-2">
+            <img src="https://picsum.photos/id/24/190/70" class="d-block w-100 ps-2 pe-2">
           </div>
           <div class="carousel-item">
-            <img src="https://picsum.photos/190/50" class="d-block w-100 ps-2 pe-2">
+            <img src="https://picsum.photos/id/367/190/70" class="d-block w-100 ps-2 pe-2">
           </div>
           <div class="carousel-item">
-            <img src="https://picsum.photos/190/50" class="d-block w-100 ps-2 pe-2">
+            <img src="https://picsum.photos/id/464/190/70" class="d-block w-100 ps-2 pe-2">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
