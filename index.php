@@ -21,7 +21,12 @@
                                   }
                                 ?></ul>
                                 <h4 class="text-primary text-center card-header mt-3 pb-3 border-info">Dergiler</h4>
-                               <!-- listeleme yapılacak -->
+                                <ul class="mt-2"><?php
+                                  $diz = $sistem->genelsorgu($db, "SELECT * FROM dergiler",1);
+                                  while ($dizi = $diz->FETCH_ASSOC()) {
+                                    echo '<a href="dergidetay.php?id='.$dizi["id"].'"><li>'.$dizi["ad"].'</li></a>';
+                                  }
+                                ?></ul>
                               </div>
                             </div>
                         </div>
