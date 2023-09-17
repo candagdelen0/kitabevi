@@ -3,7 +3,20 @@
     include "partials/_slider.php";
     $sistem = new System;
 ?>
+<style>
+    #kitapalan {
+        background-color: #DCDCDC;
+        border-radius: 15px;
 
+    }
+    #katalan {
+        background-color: #ADD8E6;
+        border-radius: 15px;
+    }
+    a {
+        text-decoration: none;
+    }
+</style>
 <div class="container-fluid">
     <div class="col-10 mx-auto">
         <div class="row">
