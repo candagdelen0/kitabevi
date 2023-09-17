@@ -52,11 +52,22 @@
                             </div>';
                           }
                         ?></div>
-
                         <h2 class="ms-2 mt-2 mb-2">Ayın Yazarları</h2>
-                        <div class="row">
-                            <!-- card döngüsü kurulacak -->
-                        </div>
+                        <div class="row"><?php
+                          $diz = $sistem->genelsorgu($db, "SELECT * FROM kitaplar ORDER BY satis DESC LIMIT 3",1);
+                          while($dizi = $diz->FETCH_ASSOC()) {
+                            $yazarid = $dizi["yazarid"];
+                            $diz2 = $sistem->genelsorgu($db, "SELECT * FROM yazarlar WHERE id = $yazarid",1);
+                            while ($dizi2 = $diz2->FETCH_ASSOC()) {
+                              echo '<div class="card m-2 ms-3" style="width: 18rem; height: 300px;">
+                              <img src="resimler/yazarlar/'.$dizi2["resim"].'" class="card-img-top mt-2 rounded-circle" style="height: 250px;">
+                              <div class="card-body">
+                                <h5 class="card-title text-center"><a href="yazardetay.php?id='.$dizi2["id"].'" class="text-secondary">'.$dizi2["ad"].'</a></h5>
+                              </div>
+                            </div>';
+                            }
+                          }
+                        ?></div>
                     </div>
                 </div> 
             </div>
