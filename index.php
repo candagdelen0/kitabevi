@@ -14,7 +14,12 @@
                             <div class="col-12 card" id="katalan">
                               <h4 class="text-primary text-center card-header mt-3 pb-3 border-info">Kategoriler</h4>
                               <div class="card-body text-primary">
-                                <!-- listeleme yapılacak -->
+                              <ul><?php
+                                  $diz = $sistem->genelsorgu($db, "SELECT * FROM kategoriler",1);
+                                  while ($dizi = $diz->FETCH_ASSOC()) {
+                                    echo '<a href="kategori.php?id='.$dizi["id"].'"><li>'.$dizi["ad"].'</li></a>';
+                                  }
+                                ?></ul>
                                 <h4 class="text-primary text-center card-header mt-3 pb-3 border-info">Dergiler</h4>
                                <!-- listeleme yapılacak -->
                               </div>
