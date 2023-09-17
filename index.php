@@ -33,9 +33,25 @@
                     </div>
                     <div class="col-8" id="kitapalan">
                         <h2 class="ms-2 mt-2 mb-2">Ayın Kitapları</h2>
-                        <div class="row">
-                             <!-- card döngüsü kurulacak -->
-                        </div>
+                        <div class="row"><?php
+                          $diz = $sistem->genelsorgu($db, "SELECT * FROM kitaplar ORDER BY satis DESC LIMIT 3",1);
+                          while($dizi = $diz->FETCH_ASSOC()) {
+                            echo '<div class="col-4">
+                              <div class="card m-2 ms-3">
+                                <img src="resimler/kitaplar/'.$dizi["resim"].'" class="card-img-top mt-2 p-2">
+                                <div class="card-body">
+                                  <h5 class="card-title"><a href="kitapdetay.php?id='.$dizi["id"].'" class="text-dark">'.$dizi["ad"].'</a></h5>';
+                                  $yazarid = $dizi["yazarid"];
+                                  $diz2 = $sistem->genelsorgu($db, "SELECT * FROM yazarlar WHERE id = $yazarid",1);
+                                  $dizi2 = $diz2->FETCH_ASSOC();
+                                  echo '<p class="card-text mb-5"><span class="float-start">'.$dizi2["ad"].'</span><span class="float-end"><em>'.$dizi["yayınevi"].'</em></span></p>
+                                  <p class="card-text"><b>'.$dizi["fiyat"].' TL</b></p>
+                                  <a href="#" class="btn btn-primary mt-2 float-end">Sepete Ekle</a>
+                                </div>
+                              </div>
+                            </div>';
+                          }
+                        ?></div>
 
                         <h2 class="ms-2 mt-2 mb-2">Ayın Yazarları</h2>
                         <div class="row">
