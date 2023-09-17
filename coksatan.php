@@ -2,7 +2,12 @@
     include "partials/_navbar.php";
     $sistem = new System;
 ?>
-
+<style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
 <div class="container">
     <div class="col-10 mx-auto">
         <div class="row">
