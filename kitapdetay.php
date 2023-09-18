@@ -15,7 +15,17 @@
                 <h3 class="mt-2"><?php echo $dizi["ad"]; ?></h3><hr>
                 <p class="pb-3 border-bottom"><?php echo $dizi["aciklama"]; ?></p>
                 <div>
-                   <!-- kitap özellikleri -->
+                    <?php 
+                        $yazarid = $dizi["yazarid"];
+                        $diz2 = $sistem->genelsorgu($db, "SELECT * FROM yazarlar WHERE id = $yazarid",1);
+                        $dizi2 = $diz2->FETCH_ASSOC();
+                    ?>
+                    <ul>
+                        <li>Yazar: <em><?php echo $dizi2["ad"]; ?></em></li>
+                        <li>Yayınevi: <em><?php echo $dizi["yayınevi"]; ?></em></li>
+                        <li>Basım Yılı: <em><?php echo $dizi["basimTarih"]; ?></em></li>
+                        <li>Sayfa Sayısı: <em><?php echo $dizi["sayfasayisi"]; ?></em></li>
+                    </ul>
                 </div>
             </div>
             <div class="col-3" style="background-color: #FAF5F0;">
@@ -41,6 +51,18 @@
                 </div>
             </div>
         </div>
-        <!-- Yorumlar Bölümü -->
+        <div class="row mb-3 pt-3" style="background-color: #FAF5F0;">
+            <div class="col-12">
+                <div class="row border-bottom">
+                    <div class="col-4" style="background-color: #FFFFF0;">
+                        <p class="text-center pt-3"><i class="fa-regular fa-user border border-warning rounded-circle p-3 fs-5" style="color: #ff9500;"></i></p>
+                    </div>
+                    <div class="col-8" style="background-color: #F0FFFF;">
+                        <p class="pt-2 ps-3 text-danger">UserName</p>
+                        <p class="ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum facere eos neque beatae, quibusdam nisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
