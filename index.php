@@ -27,7 +27,7 @@
                             <div class="col-12 card" id="katalan">
                               <h4 class="text-primary text-center card-header mt-3 pb-3 border-info">Kategoriler</h4>
                               <div class="card-body text-primary">
-                              <ul><?php
+                                <ul><?php
                                   $diz = $sistem->genelsorgu($db, "SELECT * FROM kategoriler",1);
                                   while ($dizi = $diz->FETCH_ASSOC()) {
                                     echo '<a href="kategori.php?id='.$dizi["id"].'"><li>'.$dizi["ad"].'</li></a>';
@@ -59,12 +59,13 @@
                                   $dizi2 = $diz2->FETCH_ASSOC();
                                   echo '<p class="card-text mb-5"><span class="float-start">'.$dizi2["ad"].'</span><span class="float-end"><em>'.$dizi["yayınevi"].'</em></span></p>
                                   <p class="card-text"><b>'.$dizi["fiyat"].' TL</b></p>
-                                  <a href="#" class="btn btn-primary mt-2 float-end">Sepete Ekle</a>
+                                  <a href="islemler.php?kitapid='.$dizi["id"].'&islem=sepetekle" class="btn btn-primary mt-2 float-end">Sepete Ekle</a>
                                 </div>
                               </div>
                             </div>';
                           }
                         ?></div>
+
                         <h2 class="ms-2 mt-2 mb-2">Ayın Yazarları</h2>
                         <div class="row"><?php
                           $diz = $sistem->genelsorgu($db, "SELECT * FROM kitaplar ORDER BY satis DESC LIMIT 3",1);
