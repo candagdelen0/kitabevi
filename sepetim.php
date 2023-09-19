@@ -56,7 +56,12 @@
                     </div>
                 </form>
             </div>
-            
+            <?php
+                if (@$_POST["tümsil"]) {
+                    $sistem->genelsorgu($db, "DELETE FROM sepet WHERE userid = $userid",1);
+                    header("Location: sepetim.php?id=".$userid);
+                }
+            ?>
         </div>
     </div>
 </div>                      
