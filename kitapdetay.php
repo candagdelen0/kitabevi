@@ -43,7 +43,7 @@
                                     </p>
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button class="btn text-white" style="background-color: #DC143C;" type="submit">Sepete Ekle</button>
+                                    <a href="islemler.php?kitapid=<?php echo $kitid; ?>&islem=sepetekle" class="btn btn-danger mt-2">Sepete Ekle</a>
                                 </div>
                             </div>
                         </div>
@@ -62,6 +62,8 @@
                         <p class="ps-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum facere eos neque beatae, quibusdam nisi.</p>
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </div>
