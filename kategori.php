@@ -60,7 +60,7 @@
                                         <h5 class="card-title"><a href="kitapdetay.php?id='.$dizi["id"].'">'.$dizi["ad"].'</a></h5>
                                         <p class="card-text mb-5"><span class="float-start">'.$dizi4["ad"].'</span><span class="float-end"><em>'.$dizi["yayınevi"].'</em></span></p>
                                         <p class="card-text"><b>'.$dizi["fiyat"].' TL</b></p>
-                                        <a href="#" class="btn btn-primary mt-2 float-end">Sepete Ekle</a>
+                                        <a href="islemler.php?kitapid='.$dizi["id"].'&islem=sepetekle" class="btn btn-primary mt-2 float-end">Sepete Ekle</a>
                                     </div>
                                 </div>';
                             }
@@ -78,7 +78,7 @@
                                         <h5 class="card-title"><a href="kitapdetay.php?id='.$dizi["id"].'">'.$dizi2["ad"].'</a></h5>
                                         <p class="card-text mb-5"><span class="float-start">'.$dizi3["ad"].'</span><span class="float-end"><em>'.$dizi2["yayınevi"].'</em></span></p>
                                         <p class="card-text"><b>'.$dizi2["fiyat"].' TL</b></p>
-                                        <a href="#" class="btn btn-primary float-end">Sepete Ekle</a>
+                                        <a href="islemler.php?kitapid='.$dizi2["id"].'&islem=sepetekle" class="btn btn-primary float-end">Sepete Ekle</a>
                                     </div>
                                 </div>';
                             }
