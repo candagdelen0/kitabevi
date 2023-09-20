@@ -2,6 +2,23 @@
     include "partials/_navbar.php";
     $sistem = new System;
     $username = $password = $repassword = $email = "";
+    if(@$_POST["submit"]) {
+        $username = $sistem->safety($_POST["username"]);
+        $email = $sistem->safety($_POST["email"]);
+        $password = md5(sha1($sistem->safety($_POST["password"])));
+        $repassword = md5(sha1($sistem->safety($_POST["repassword"])));
+
+        $query = $sistem->genelsorgu($db, "SELECT * FROM users WHERE usermail = '$email'",1);
+        if ($query->num_rows != 0) {
+            echo '<div class="col-md-4 mx-auto alert alert-danger mt-3">Girilen e-mail adresi kayıtlı</div>';
+        } elseif ($password != $repassword) {
+            echo '<div class="col-md-4 mx-auto alert alert-danger mt-3">Girilen Şifreler Uyumsuz</div>';
+        } else {
+            $sistem->genelsorgu($db, "INSERT INTO users (username, usermail, userpsw) VALUES ('$username','$email','$password')",1);
+            echo '<div class="col-md-4 mx-auto mt-2 alert alert-success">Kayıt Başarılı</div>';
+            header("refresh: 2, url=login.php");
+        }
+    }
 
 ?>
 <style>
