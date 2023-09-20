@@ -1,3 +1,14 @@
+<?php
+    include "partials/_navbar.php";
+    $sistem = new System;
+    $username = $password = $repassword = $email = "";
+
+?>
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>
 <div class="container my-3">
     <div class="row">
         <div class="col-md-4 mx-auto">
@@ -28,4 +39,6 @@
         </div>
     </div>
 </div>
-
+<div class="fixed-bottom col-10 mx-auto">
+    <?php include "partials/_footer.php"; ?>
+</div>
