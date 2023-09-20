@@ -31,10 +31,10 @@
                             echo '<div class="col-4 mt-2 card mb-2">
                                 <img src="resimler/kitaplar/'.$dizi2["resim"].'" class="pt-2">
                                 <div class="card-body">
-                                    <h5 class="card-title"><a href="#">'.$dizi2["ad"].'</a></h5>
+                                    <h5 class="card-title"><a href="kitapdetay.php?id='.$dizi2["id"].'">'.$dizi2["ad"].'</a></h5>
                                     <p class="card-text mb-5"><span class="float-start">'.$dizi["ad"].'</span><span class="float-end"><em>'.$dizi2["yayınevi"].'</em></span></p>
                                     <p class="card-text"><b>'.$dizi2["fiyat"].' TL</b></p>
-                                    <a href="#" class="btn btn-primary float-end">Sepete Ekle</a>
+                                    <a href="islemler.php?kitapid='.$dizi2["id"].'&islem=sepetekle" class="btn btn-primary float-end">Sepete Ekle</a>
                                 </div>
                             </div>';
                         }
