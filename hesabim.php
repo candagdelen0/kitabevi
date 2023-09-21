@@ -7,7 +7,54 @@
     $diz = $sistem->genelsorgu($db, "SELECT * FROM users WHERE id = $userid",1);
     $dizi = $diz->FETCH_ASSOC();
 ?>
+<style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
+    .dropbtn {
+        background-color: #F8F9FA;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        font-weight: bold;
+    }
+
+    #yonbtn:hover {
+        font-weight: bold;
+        color: orangered;
+    }
+
+</style>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mx-auto">
